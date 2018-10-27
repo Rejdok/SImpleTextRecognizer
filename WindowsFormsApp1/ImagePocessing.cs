@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace SimpleTextRecognizer
 {
     public partial class ImagePocessing : Form
     {
@@ -16,5 +16,12 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+        public ref PictureBox PictureBox1 { get { return ref this.pictureBox1; } }
+        public ref PictureBox PictureBox2 { get { return ref this.pictureBox2; } }
     }
 }

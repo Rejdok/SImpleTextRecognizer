@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace SimpleTextRecognizer
 {
     partial class CaptureRegion
     {
