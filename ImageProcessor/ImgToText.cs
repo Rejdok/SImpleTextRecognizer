@@ -22,13 +22,28 @@ namespace ImageProcessor
                 imgReady.Set();
             }
         }
-
+        static int RegisonCompare(Rectangle lhs, Rectangle lgs)
+        {
+            if (lhs.Top < lhs.Top)
+            {
+                return 1;
+            }
+            else
+            {
+                if (lhs.Left < lhs.Left)
+                {
+                    return 1;
+                }
+            }
+            return -1;
+        } 
         private void decodeTextFromImg()
         {
             while (!ShoudTerminate) {
                 imgReady.WaitOne();
                 currText.Clear();
                 var imgs = new System.Collections.Concurrent.ConcurrentQueue<Image<Gray, Byte>>();
+                TextRegions.Sort(RegisonCompare);
                 foreach (var r in TextRegions)
                 {
                     var region = FiltredImg.Copy(r);

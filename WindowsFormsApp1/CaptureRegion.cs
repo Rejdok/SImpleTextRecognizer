@@ -19,6 +19,8 @@ namespace SimpleTextRecognizer
             InitializeComponent();
             this.TopMost = true;
             this.Hide();
+            this.BackColor = Color.Tan;
+            this.TransparencyKey = Color.Tan;
             _callback = this.MouseMoveCallBack;
             _hook = MouseHook.SetWindowsHookEx(MouseHook.HookType.WH_MOUSE_LL, _callback, MouseHook.GetModuleHandle("user32"), 0);
             if (_hook == IntPtr.Zero) throw new System.ComponentModel.Win32Exception();
