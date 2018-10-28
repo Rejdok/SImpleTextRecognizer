@@ -28,12 +28,13 @@ namespace ImageProcessor
             {
                 return 1;
             }
-            else
+            else if (lhs.Left < lhs.Left)
             {
-                if (lhs.Left < lhs.Left)
-                {
-                    return 1;
-                }
+                return 1;
+            }
+            if(lhs.Left == lhs.Left&& lhs.Top  == lhs.Top)
+            {
+                return 0;
             }
             return -1;
         } 

@@ -42,6 +42,7 @@ namespace ImageProcessor
                 {
                     CvInvoke.Rectangle(imgout, r, new MCvScalar(255, 255, 255), -1);
                 }
+                OnImg3Ready(new ImgOut(imgout));
 
                 imgout = img.Copy(imgout);
                 //find counturs

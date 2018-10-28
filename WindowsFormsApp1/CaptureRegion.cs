@@ -19,9 +19,11 @@ namespace SimpleTextRecognizer
             InitializeComponent();
             this.TopMost = true;
             this.Hide();
-            this.BackColor = Color.Tan;
-            this.TransparencyKey = Color.Tan;
             _callback = this.MouseMoveCallBack;
+            this.BackColor = Color.Aqua;
+            this.TransparencyKey = Color.Aqua;
+            this.Width = 0;
+            this.Height = 0;
             _hook = MouseHook.SetWindowsHookEx(MouseHook.HookType.WH_MOUSE_LL, _callback, MouseHook.GetModuleHandle("user32"), 0);
             if (_hook == IntPtr.Zero) throw new System.ComponentModel.Win32Exception();
 
@@ -81,6 +83,8 @@ namespace SimpleTextRecognizer
 
         private void CaptureRegion_Paint(object sender, PaintEventArgs e)
         {
+            e.Graphics.Clear(Color.Aqua);
+            e.Graphics.Flush();
             e.Graphics.DrawRectangle(new Pen(Color.Red, 3),
                                      this.DisplayRectangle);
         }
@@ -112,4 +116,3 @@ namespace SimpleTextRecognizer
 
     }
 }
-

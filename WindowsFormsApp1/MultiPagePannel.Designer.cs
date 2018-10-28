@@ -1,6 +1,6 @@
 ﻿namespace SimpleTextRecognizer
 {
-    partial class CaptureRegion
+    partial class MultiPagePannel
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -28,30 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // CaptureRegion
+            // panel1
             // 
-            this.AllowDrop = true;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(0, 0);
-            this.ControlBox = false;
-            this.ForeColor = System.Drawing.Color.Coral;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "CaptureRegion";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.TopMost = true;
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.CaptureRegion_Paint);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(995, 558);
+            this.panel1.TabIndex = 0;
+            // 
+            // MultiPagePannel
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
+            this.Name = "MultiPagePannel";
+            this.Size = new System.Drawing.Size(995, 558);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel1;
     }
 }
